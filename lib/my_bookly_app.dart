@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_bookly_app/core/theme/app_theme.dart';
 import 'package:my_bookly_app/features/splash/presentation/views/splash_view.dart';
 
-class MyBoobyApp extends StatelessWidget {
-  const MyBoobyApp({super.key});
+class MyBooklyApp extends StatelessWidget {
+  const MyBooklyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class MyBoobyApp extends StatelessWidget {
           home: SplashView(),
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode: ThemeMode.dark,
+          themeMode: ThemeMode.light,
         );
       },
     );
