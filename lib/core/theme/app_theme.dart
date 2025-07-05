@@ -15,7 +15,7 @@ class AppTheme {
       onBackground: Colors.black,
       onSurface: Colors.black,
     ),
-    scaffoldBackgroundColor: AppColors.primary,
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.deepPurple,
       foregroundColor: Colors.white,
@@ -60,7 +60,7 @@ class AppTheme {
       onBackground: Colors.white,
       onSurface: Colors.white,
     ),
-    scaffoldBackgroundColor: Color(0xFF181A20),
+    scaffoldBackgroundColor: AppColors.primary,
     appBarTheme: AppBarTheme(
       backgroundColor: Color(0xFF23272F),
       foregroundColor: Colors.white,
