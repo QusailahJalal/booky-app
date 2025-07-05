@@ -19,7 +19,7 @@ class MyBooklyApp extends StatelessWidget {
           home: SplashView(),
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode: ThemeMode.light,
+          themeMode: ThemeMode.dark,
         );
       },
     );
