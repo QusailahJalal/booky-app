@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/instance_manager.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
 
 class AppTheme {
@@ -62,7 +64,7 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: AppColors.primary,
     appBarTheme: AppBarTheme(
-      backgroundColor: Color(0xFF23272F),
+      backgroundColor: AppColors.primary,
       foregroundColor: Colors.white,
       elevation: 0,
       iconTheme: IconThemeData(color: Colors.white),
@@ -81,7 +83,7 @@ class AppTheme {
       bodyMedium: TextStyle(fontSize: 16, color: Colors.white70),
       bodySmall: TextStyle(fontSize: 14, color: Colors.white60),
     ),
-    iconTheme: IconThemeData(color: Colors.amber),
+    iconTheme: IconThemeData(color: Colors.white),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Colors.amber,
       foregroundColor: Colors.black,
