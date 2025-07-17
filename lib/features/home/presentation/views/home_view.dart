@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
+import 'package:my_bookly_app/core/theme/app_colors.dart';
+import 'package:my_bookly_app/core/utils/extentions/spacing_extension.dart';
 import 'package:my_bookly_app/features/home/presentation/views/widgets/custom_header.dart';
+import 'package:my_bookly_app/features/home/presentation/views/widgets/list_item_card.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -42,61 +45,49 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomHeader(
-            leading: SvgPicture.asset(Assets.images.logo.path),
+            leading: SvgPicture.asset(
+              Assets.images.logo.path,
+              color: !Get.isDarkMode ? AppColors.onBackgroundLight : null,
+            ),
             actionIcon: Icon(Icons.search, size: 25.sp),
           ).marginSymmetric(horizontal: 30.w, vertical: 48.w),
-          SizedBox(
-            height: 224.h,
-            child: NotificationListener<ScrollNotification>(
-              onNotification: (notification) {
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-                  if (mounted) setState(() {});
-                });
-                return false;
-              },
-              child: ListView.builder(
-                controller: _scrollController,
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  double scale = getScaleForItem(index);
-
-                  return ListItemCard(
-                    bookImg: Assets.images.testBookImg.path,
-                    scale: scale,
-                  ).marginOnly(right: 12.w);
-                },
-              ).paddingOnly(left: 30.w),
-            ),
-          ),
+          _buildListViewAndItsAnimated(),
+          50.height,
+          Text(
+            'Best Seller',
+            style: Get.textTheme.titleLarge,
+          ).marginSymmetric(horizontal: 30.w),
         ],
       ),
     );
   }
-}
 
-class ListItemCard extends StatelessWidget {
-  final String bookImg;
-  final double scale;
+  Widget _buildListViewAndItsAnimated() {
+    return SizedBox(
+      height: 224.h,
+      child: NotificationListener<ScrollNotification>(
+        onNotification: (notification) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) setState(() {});
+          });
+          return false;
+        },
+        child: ListView.builder(
+          controller: _scrollController,
+          scrollDirection: Axis.horizontal,
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            double scale = getScaleForItem(index);
 
-  const ListItemCard({super.key, required this.bookImg, this.scale = 1.0});
-
-  @override
-  Widget build(BuildContext context) {
-    double baseWidth = 150.w;
-    double baseHeight = 200.h;
-
-    return Align(
-      alignment: Alignment.center,
-      child: Container(
-        width: baseWidth * scale,
-        height: baseHeight * scale,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16.r),
-          image: DecorationImage(fit: BoxFit.fill, image: AssetImage(bookImg)),
-        ),
+            return ListItemCard(
+              bookImg: Assets.images.testBookImg.path,
+              scale: scale,
+            ).marginOnly(right: 12.w);
+          },
+        ).paddingOnly(left: 30.w),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
@@ -8,89 +9,103 @@ class AppTheme {
     brightness: Brightness.light,
     primaryColor: AppColors.primary,
     colorScheme: ColorScheme.light(
-      primary: Colors.deepPurple,
-      secondary: Colors.amber,
-      background: Colors.white,
-      surface: Colors.white,
-      onPrimary: Colors.white,
-      onSecondary: Colors.black,
-      onBackground: Colors.black,
-      onSurface: Colors.black,
+      primary: AppColors.primary,
+      secondary: AppColors.secondary,
+      background: AppColors.backgroundLight,
+      surface: AppColors.surfaceLight,
+      onPrimary: AppColors.onPrimary,
+      onSecondary: AppColors.onSecondary,
+      onBackground: AppColors.onBackgroundLight,
+      onSurface: AppColors.onSurfaceLight,
     ),
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: AppColors.backgroundLight,
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.deepPurple,
-      foregroundColor: Colors.white,
+      backgroundColor: AppColors.appBarLight,
+      foregroundColor: AppColors.onPrimary,
       elevation: 0,
-      iconTheme: IconThemeData(color: Colors.white),
+      iconTheme: IconThemeData(color: AppColors.iconLight),
     ),
-    textTheme: TextTheme(
-      headlineLarge: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-      ),
-      titleMedium: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-        color: Colors.black87,
-      ),
-      bodyMedium: TextStyle(fontSize: 16, color: Colors.black87),
-      bodySmall: TextStyle(fontSize: 14, color: Colors.black54),
-    ),
-    iconTheme: IconThemeData(color: Colors.deepPurple),
+    iconTheme: IconThemeData(color: AppColors.iconLight),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Colors.amber,
-      foregroundColor: Colors.black,
+      backgroundColor: AppColors.fabBackground,
+      foregroundColor: AppColors.fabForeground,
     ),
     buttonTheme: ButtonThemeData(
-      buttonColor: Colors.deepPurple,
+      buttonColor: AppColors.primary,
       textTheme: ButtonTextTheme.primary,
+    ),
+    textTheme: TextTheme(
+      displayLarge: TextStyle(fontSize: 57.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
+      displayMedium: TextStyle(fontSize: 45.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
+      displaySmall: TextStyle(fontSize: 36.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
+
+      headlineLarge: TextStyle(fontSize: 32.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
+      headlineMedium: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimaryLight),
+      headlineSmall: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryLight),
+
+      titleLarge: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryLight),
+      titleMedium: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryLight),
+      titleSmall: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryLight),
+
+      bodyLarge: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
+      bodyMedium: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
+      bodySmall: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
+
+      labelLarge: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.textPrimaryLight),
+      labelMedium: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryLight),
+      labelSmall: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
     ),
   );
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    primaryColor: Colors.deepPurple,
+    primaryColor: AppColors.primary,
     colorScheme: ColorScheme.dark(
-      primary: Colors.deepPurple,
-      secondary: Colors.amber,
-      background: Color(0xFF181A20),
-      surface: Color(0xFF23272F),
-      onPrimary: Colors.white,
-      onSecondary: Colors.black,
-      onBackground: Colors.white,
-      onSurface: Colors.white,
+      primary: AppColors.primary,
+      secondary: AppColors.secondary,
+      background: AppColors.backgroundDark,
+      surface: AppColors.surfaceDark,
+      onPrimary: AppColors.onPrimary,
+      onSecondary: AppColors.onSecondary,
+      onBackground: AppColors.onBackgroundDark,
+      onSurface: AppColors.onSurfaceDark,
     ),
-    scaffoldBackgroundColor: AppColors.primary,
+    scaffoldBackgroundColor: AppColors.backgroundDark,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.primary,
-      foregroundColor: Colors.white,
+      backgroundColor: AppColors.appBarDark,
+      foregroundColor: AppColors.onPrimary,
       elevation: 0,
-      iconTheme: IconThemeData(color: Colors.white),
+      iconTheme: IconThemeData(color: AppColors.iconDark),
     ),
-    textTheme: TextTheme(
-      headlineLarge: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
-        color: Colors.white,
-      ),
-      titleMedium: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-        color: Colors.white70,
-      ),
-      bodyMedium: TextStyle(fontSize: 16, color: Colors.white70),
-      bodySmall: TextStyle(fontSize: 14, color: Colors.white60),
-    ),
-    iconTheme: IconThemeData(color: Colors.white),
+    iconTheme: IconThemeData(color: AppColors.iconDark),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Colors.amber,
-      foregroundColor: Colors.black,
+      backgroundColor: AppColors.fabBackground,
+      foregroundColor: AppColors.fabForeground,
     ),
     buttonTheme: ButtonThemeData(
-      buttonColor: Colors.deepPurple,
+      buttonColor: AppColors.primary,
       textTheme: ButtonTextTheme.primary,
+    ),
+    textTheme: TextTheme(
+      displayLarge: TextStyle(fontSize: 57.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
+      displayMedium: TextStyle(fontSize: 45.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
+      displaySmall: TextStyle(fontSize: 36.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
+
+      headlineLarge: TextStyle(fontSize: 32.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
+      headlineMedium: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimaryDark),
+      headlineSmall: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryDark),
+
+      titleLarge: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryDark),
+      titleMedium: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryDark),
+      titleSmall: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryDark),
+
+      bodyLarge: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
+      bodyMedium: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
+      bodySmall: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
+
+      labelLarge: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.textPrimaryDark),
+      labelMedium: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryDark),
+      labelSmall: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
     ),
   );
 }

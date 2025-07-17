@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
+import 'package:my_bookly_app/core/theme/app_colors.dart';
 import 'package:my_bookly_app/features/splash/presentation/views/widgets/text_slider_animation.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -34,7 +37,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SvgPicture.asset(Assets.images.logo.path, width: 260.w),
+        SvgPicture.asset(
+          Assets.images.logo.path,
+          width: 260.w,
+          color: !Get.isDarkMode ? AppColors.onBackgroundLight : null,
+        ),
         SizedBox(height: 8.h),
         TextSliderAnimation(slidingAnimation: slidingAnimation),
       ],
