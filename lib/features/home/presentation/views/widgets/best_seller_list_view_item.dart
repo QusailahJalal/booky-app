@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
 import 'package:my_bookly_app/core/theme/app_text_styles.dart';
 import 'package:my_bookly_app/core/utils/extentions/spacing_extension.dart';
+import 'package:my_bookly_app/features/home/presentation/views/widgets/rating_book_widget.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -24,16 +26,18 @@ class BestSellerListViewItem extends StatelessWidget {
           ),
         ),
         30.width,
-        SizedBox(
-          width: MediaQuery.of(context).size.width * .5,
+        Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Harry Potter and the Goblet of Fire',
-                style: AppTextStyles.style30,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  'Harry Potter and the Goblet of Fire',
+                  style: AppTextStyles.style30,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
               Text(
                 'J.K. Rowling',
@@ -41,9 +45,15 @@ class BestSellerListViewItem extends StatelessWidget {
                   color: AppColors.textSecondaryDark,
                 ),
               ), //
-              Text(
-                '19.99 €',
-                style: AppTextStyles.style15Bold, //left: 39.06%;
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '19.99 €',
+                    style: AppTextStyles.style15Bold, //left: 39.06%;
+                  ),
+                  RatingBookWidget(),
+                ],
               ), //
             ],
 
