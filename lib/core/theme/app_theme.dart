@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
 
 class AppTheme {
@@ -34,26 +35,88 @@ class AppTheme {
       buttonColor: AppColors.primary,
       textTheme: ButtonTextTheme.primary,
     ),
-    textTheme: TextTheme(
-      displayLarge: TextStyle(fontSize: 57.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
-      displayMedium: TextStyle(fontSize: 45.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
-      displaySmall: TextStyle(fontSize: 36.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
+    textTheme: GoogleFonts.montserratTextTheme(
+      TextTheme(
+        displayLarge: TextStyle(
+          fontSize: 57.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryLight,
+        ),
+        displayMedium: TextStyle(
+          fontSize: 45.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryLight,
+        ),
+        displaySmall: TextStyle(
+          fontSize: 36.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryLight,
+        ),
 
-      headlineLarge: TextStyle(fontSize: 32.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryLight),
-      headlineMedium: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimaryLight),
-      headlineSmall: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryLight),
+        headlineLarge: TextStyle(
+          fontSize: 32.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryLight,
+        ),
+        headlineMedium: TextStyle(
+          fontSize: 28.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textPrimaryLight,
+        ),
+        headlineSmall: TextStyle(
+          fontSize: 24.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textSecondaryLight,
+        ),
 
-      titleLarge: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryLight),
-      titleMedium: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryLight),
-      titleSmall: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryLight),
+        titleLarge: TextStyle(
+          fontSize: 22.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textSecondaryLight,
+        ),
+        titleMedium: TextStyle(
+          fontSize: 18.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textSecondaryLight,
+        ),
+        titleSmall: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.textSecondaryLight,
+        ),
 
-      bodyLarge: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
-      bodyMedium: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
-      bodySmall: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
+        bodyLarge: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textSecondaryLight,
+        ),
+        bodyMedium: TextStyle(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textSecondaryLight,
+        ),
+        bodySmall: TextStyle(
+          fontSize: 12.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textSecondaryLight,
+        ),
 
-      labelLarge: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.textPrimaryLight),
-      labelMedium: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryLight),
-      labelSmall: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryLight),
+        labelLarge: TextStyle(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.textPrimaryLight,
+        ),
+        labelMedium: TextStyle(
+          fontSize: 12.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.textSecondaryLight,
+        ),
+        labelSmall: TextStyle(
+          fontSize: 11.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textSecondaryLight,
+        ),
+      ),
     ),
   );
 
@@ -86,26 +149,88 @@ class AppTheme {
       buttonColor: AppColors.primary,
       textTheme: ButtonTextTheme.primary,
     ),
-    textTheme: TextTheme(
-      displayLarge: TextStyle(fontSize: 57.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
-      displayMedium: TextStyle(fontSize: 45.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
-      displaySmall: TextStyle(fontSize: 36.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
+    textTheme: GoogleFonts.montserratTextTheme(
+      TextTheme(
+        displayLarge: TextStyle(
+          fontSize: 57.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryDark,
+        ),
+        displayMedium: TextStyle(
+          fontSize: 45.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryDark,
+        ),
+        displaySmall: TextStyle(
+          fontSize: 36.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryDark,
+        ),
 
-      headlineLarge: TextStyle(fontSize: 32.sp, fontWeight: FontWeight.bold, color: AppColors.textPrimaryDark),
-      headlineMedium: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimaryDark),
-      headlineSmall: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryDark),
+        headlineLarge: TextStyle(
+          fontSize: 32.sp,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimaryDark,
+        ),
+        headlineMedium: TextStyle(
+          fontSize: 28.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textPrimaryDark,
+        ),
+        headlineSmall: TextStyle(
+          fontSize: 24.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textPrimaryDark,
+        ),
 
-      titleLarge: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryDark),
-      titleMedium: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, color: AppColors.textSecondaryDark),
-      titleSmall: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryDark),
+        titleLarge: TextStyle(
+          fontSize: 22.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textPrimaryDark,
+        ),
+        titleMedium: TextStyle(
+          fontSize: 18.sp,
+          fontWeight: FontWeight.w600,
+          color: AppColors.textPrimaryDark,
+        ),
+        titleSmall: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.textPrimaryDark,
+        ),
 
-      bodyLarge: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
-      bodyMedium: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
-      bodySmall: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
+        bodyLarge: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textPrimaryDark,
+        ),
+        bodyMedium: TextStyle(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textPrimaryDark,
+        ),
+        bodySmall: TextStyle(
+          fontSize: 12.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textPrimaryDark,
+        ),
 
-      labelLarge: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.textPrimaryDark),
-      labelMedium: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondaryDark),
-      labelSmall: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w400, color: AppColors.textSecondaryDark),
+        labelLarge: TextStyle(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.textPrimaryDark,
+        ),
+        labelMedium: TextStyle(
+          fontSize: 12.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.textPrimaryDark,
+        ),
+        labelSmall: TextStyle(
+          fontSize: 11.sp,
+          fontWeight: FontWeight.w400,
+          color: AppColors.textPrimaryDark,
+        ),
+      ),
     ),
   );
 }

@@ -4,7 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
+import 'package:my_bookly_app/core/theme/app_text_styles.dart';
 import 'package:my_bookly_app/core/utils/extentions/spacing_extension.dart';
+import 'package:my_bookly_app/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:my_bookly_app/features/home/presentation/views/widgets/custom_header.dart';
 import 'package:my_bookly_app/features/home/presentation/views/widgets/list_item_card.dart';
 
@@ -58,8 +60,10 @@ class _HomeViewState extends State<HomeView> {
           50.height,
           Text(
             'Best Seller',
-            style: Get.textTheme.titleLarge,
+            style: Get.textTheme.titleMedium,
           ).marginSymmetric(horizontal: 30.w),
+          30.height,
+          BestSellerListViewItem().paddingSymmetric(horizontal: 30.w),
         ],
       ),
     );
