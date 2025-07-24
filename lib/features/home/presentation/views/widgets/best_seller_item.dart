@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
 import 'package:my_bookly_app/core/theme/app_text_styles.dart';
 import 'package:my_bookly_app/core/utils/extentions/spacing_extension.dart';
 import 'package:my_bookly_app/features/home/presentation/views/widgets/rating_book_widget.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BestSellerItem extends StatelessWidget {
+  const BestSellerItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,3 +63,4 @@ class BestSellerListViewItem extends StatelessWidget {
     );
   }
 }
+
