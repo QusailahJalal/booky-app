@@ -33,7 +33,7 @@ class BestSellerItem extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * .5,
                 child: Text(
                   'Harry Potter and the Goblet of Fire',
-                  style: AppTextStyles.style30,
+                  style: AppTextStyles.style20,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -63,4 +63,3 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-

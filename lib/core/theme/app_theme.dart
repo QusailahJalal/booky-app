@@ -20,7 +20,7 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: AppColors.backgroundLight,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.appBarLight,
+      backgroundColor: AppColors.backgroundLight,
       foregroundColor: AppColors.onPrimary,
       elevation: 0,
       iconTheme: IconThemeData(color: AppColors.iconLight),

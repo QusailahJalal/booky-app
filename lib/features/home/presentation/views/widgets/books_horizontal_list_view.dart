@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
 import 'package:my_bookly_app/core/utils/extentions/spacing_extension.dart';
 import 'package:my_bookly_app/core/utils/extentions/widget_extensions.dart';
-import 'package:my_bookly_app/features/home/presentation/views/widgets/list_item_card.dart';
+import 'package:my_bookly_app/features/home/presentation/views/widgets/book_card.dart';
 
 class BooksHorizontalListView extends StatelessWidget {
   const BooksHorizontalListView({super.key});
@@ -16,7 +16,7 @@ class BooksHorizontalListView extends StatelessWidget {
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) =>
-            ListItemCard(bookImg: Assets.images.testBookImg.path),
+            BookCard(bookImg: Assets.images.testBookImg.path),
         separatorBuilder: (context, index) => 16.width,
         itemCount: 15,
       ),
