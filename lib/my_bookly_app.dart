@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_bookly_app/core/theme/app_theme.dart';
-import 'package:my_bookly_app/features/home/presentation/views/home_view.dart';
-import 'package:my_bookly_app/features/splash/presentation/views/splash_view.dart';
+import 'package:my_bookly_app/core/utils/routers/app_routers.dart';
 
 class MyBooklyApp extends StatelessWidget {
   const MyBooklyApp({super.key});
@@ -15,12 +13,13 @@ class MyBooklyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return GetMaterialApp(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          home: SafeArea(child: SplashView()),
+
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: ThemeMode.dark,
+          routerConfig: AppRouters.router,
         );
       },
     );

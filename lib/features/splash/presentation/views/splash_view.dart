@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/utils.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_bookly_app/features/home/presentation/views/home_view.dart';
 import 'package:my_bookly_app/features/splash/presentation/views/widgets/splash_view_body.dart';
 
@@ -28,7 +27,7 @@ class _SplashViewState extends State<SplashView> {
    void navigateToHome() {
     Future.delayed(
       Duration(seconds: 4),
-      () => Get.to(HomeView(), transition: Transition.leftToRight),
+      () => GoRouter.of(context).push('/home'),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:my_bookly_app/core/utils/extentions/spacing_extension.dart';
+import 'package:my_bookly_app/core/utils/extentions/widget_extensions.dart';
 import 'package:my_bookly_app/features/home/presentation/views/widgets/best_seller_item.dart';
 
 class BestSellerListView extends StatelessWidget {
