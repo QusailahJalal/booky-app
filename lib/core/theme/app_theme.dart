@@ -134,7 +134,7 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: AppColors.backgroundDark,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.appBarDark,
+      backgroundColor: AppColors.backgroundDark,
       foregroundColor: AppColors.onPrimary,
       elevation: 0,
       iconTheme: IconThemeData(color: AppColors.iconDark),
