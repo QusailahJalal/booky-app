@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:my_bookly_app/core/gen/assets.gen.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
 import 'package:my_bookly_app/core/utils/extentions/widget_extensions.dart';
+import 'package:my_bookly_app/core/utils/routers/routes.dart';
 import 'package:my_bookly_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:my_bookly_app/my_bookly_app.dart';
 
@@ -26,14 +29,20 @@ class HomeView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              themeNotifier.value = themeNotifier.value == ThemeMode.light
-                  ? ThemeMode.dark
-                  : ThemeMode.light;
+              GoRouter.of(context).push(Routes.Search);
             },
-            icon: themeNotifier.value == ThemeMode.dark
-                ? Icon(Icons.light_mode)
-                : Icon(Icons.dark_mode),
+            icon: Icon(FontAwesomeIcons.search),
           ),
+          // IconButton(
+          //   onPressed: () {
+          //     themeNotifier.value = themeNotifier.value == ThemeMode.light
+          //         ? ThemeMode.dark
+          //         : ThemeMode.light;
+          //   },
+          //   icon: themeNotifier.value == ThemeMode.dark
+          //       ? Icon(Icons.light_mode)
+          //       : Icon(Icons.dark_mode),
+          // ),
         ],
         actionsPadding: EdgeInsetsDirectional.only(end: 20.w),
       ),
