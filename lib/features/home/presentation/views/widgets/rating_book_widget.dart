@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:my_bookly_app/core/theme/app_colors.dart';
 import 'package:my_bookly_app/core/theme/app_text_styles.dart';
@@ -10,8 +11,13 @@ class RatingBookWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(FontAwesomeIcons.solidStar, color: AppColors.fabBackground),
+        Icon(
+          FontAwesomeIcons.solidStar,
+          color: AppColors.fabBackground,
+          size: 14.sp,
+        ),
         5.width,
         Text('4.8', style: AppTextStyles.style16),
         3.width,

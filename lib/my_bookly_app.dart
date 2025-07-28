@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_bookly_app/core/theme/app_theme.dart';
 import 'package:my_bookly_app/core/utils/routers/app_routers.dart';
 
+final themeNotifier = ValueNotifier(ThemeMode.dark);
+
 class MyBooklyApp extends StatelessWidget {
   const MyBooklyApp({super.key});
 
@@ -13,13 +15,18 @@ class MyBooklyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
+        return ValueListenableBuilder<ThemeMode>(
+          valueListenable: themeNotifier,
+          builder: (context, currentTheme, _) {
+            return MaterialApp.router(
+              debugShowCheckedModeBanner: false,
 
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
-          themeMode: ThemeMode.dark,
-          routerConfig: AppRouters.router,
+              theme: AppTheme.lightTheme,
+              darkTheme: AppTheme.darkTheme,
+              themeMode: currentTheme,
+              routerConfig: AppRouters.router,
+            );
+          },
         );
       },
     );

@@ -18,12 +18,16 @@ abstract class AppTextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
+  static TextStyle style18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.normal,
+  );
   static TextStyle style30 = TextStyle(
     fontSize: 30.sp,
     fontWeight: FontWeight.normal,
   );
   static TextStyle style30SemiBold = TextStyle(
     fontSize: 30.sp,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.bold,
   );
 }
